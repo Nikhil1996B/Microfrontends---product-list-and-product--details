@@ -12,6 +12,7 @@ module.exports = {
       name: "container",
       remotes: {
         products: "products@https://czshfg-8081.csb.app/remoteEntry.js",
+        carts: "carts@https://czshfg-8082.csb.app/remoteEntry.js",
       },
     }),
     new htmlWebpackPlugin({
