@@ -1,16 +1,16 @@
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
-const moduleFederationPlugin = require("webpack/lib/container/moduleFederationPlugin");
+const moduleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 module.exports = {
   mode: "development",
   devServer: {
     port: 8081,
-    allowedHosts: ["h78kdq-8081.csb.app"],
+    allowedHosts: ["czshfg-8081.csb.app"],
   },
   plugins: [
     new moduleFederationPlugin({
       name: "products",
-      fileName: "remoteEntry.js",
+      filename: "remoteEntry.js",
       exposes: {
         "./ProductsIndex": "./src/index",
       },
