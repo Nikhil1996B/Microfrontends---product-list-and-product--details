@@ -15,6 +15,7 @@ module.exports = {
       exposes: {
         "./CartsIndex": "./src/index",
       },
+      shared: ["faker"],
     }),
     new htmlWebpackPlugin({
       template: path.join(__dirname, "/public", "/index.html"),
