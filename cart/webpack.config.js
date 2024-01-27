@@ -6,7 +6,7 @@ module.exports = {
   mode: "development",
   devServer: {
     port: "8082",
-    allowedHosts: ["czshfg-8082.csb.app"],
+    allowedHosts: ["mvn2zl-8082.csb.app"],
   },
   plugins: [
     new moduleFederationPlugin({

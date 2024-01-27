@@ -5,14 +5,14 @@ module.exports = {
   mode: "development",
   devServer: {
     port: 8080,
-    allowedHosts: ["czshfg-8080.csb.app"],
+    allowedHosts: ["mvn2zl-8080.csb.app"],
   },
   plugins: [
     new moduleFederationPlugin({
       name: "container",
       remotes: {
-        products: "products@https://czshfg-8081.csb.app/remoteEntry.js",
-        carts: "carts@https://czshfg-8082.csb.app/remoteEntry.js",
+        products: "products@https://mvn2zl-8081.csb.app/remoteEntry.js",
+        carts: "carts@https://mvn2zl-8082.csb.app/remoteEntry.js",
       },
     }),
     new htmlWebpackPlugin({
