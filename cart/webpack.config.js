@@ -13,13 +13,9 @@ module.exports = {
       name: "carts",
       filename: "remoteEntry.js",
       exposes: {
-        "./CartsIndex": "./src/index",
+        "./CartsIndex": "./src/bootstrap",
       },
-      shared: {
-        faker: {
-          singleton: true,
-        },
-      },
+      shared: ["faker"],
     }),
     new htmlWebpackPlugin({
       template: path.join(__dirname, "/public", "/index.html"),

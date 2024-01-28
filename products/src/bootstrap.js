@@ -1,9 +1,28 @@
 import faker from "faker";
 
-let products = "";
-for (let i = 0; i < 3; i++) {
-  const name = faker.commerce.productName();
-  products += `<div>${name}</div>`;
+const mount = (el) => {
+  let products = "";
+  for (let i = 0; i < 3; i++) {
+    const name = faker.commerce.productName();
+    products += `<div>${name}</div>`;
+  }
+  el.innerHTML = products;
+};
+
+// Context / Situation 1 - when running this file in development in isolation
+// We are using our local index.html file
+// Which has an element with an id of 'dev-products'
+// We want to immediately render out app in that id
+if (process.env.NODE_ENV === "development") {
+  const el = document.querySelector("#dev-products");
+  //  assuming our container doesn't have an element
+  // with id 'dev-products' ...
+  if (el) {
+    // We are probably running in isolation
+    mount(el);
+  }
 }
 
-document.querySelector("#dev-products").innerHTML = products;
+// Context / Situation 2
+// We are running this file in development in isolation
+export { mount };
